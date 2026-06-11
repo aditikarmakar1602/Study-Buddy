@@ -20,8 +20,9 @@ connectDB();
 const app = express();
 
 // Middleware
+// origin: true automatically reflects the requesting origin, fixing trailing slash and protocol mismatches
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: true,
   credentials: true,
 }));
 app.use(express.json());
