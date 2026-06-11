@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 249 250 251; /* #F9FAFB */
+    --color-surface: 255 255 255; /* #FFFFFF */
+    --color-card: 229 231 235; /* #E5E7EB */
+    --color-primary: 124 58 237; /* #7C3AED */
+    --color-primary-hover: 139 92 246; /* #8B5CF6 */
+    --color-accent: 59 130 246; /* #3B82F6 */
+    --color-success: 16 185 129; /* #10B981 */
+    --color-warning: 245 158 11; /* #F59E0B */
+    --color-danger: 239 68 68; /* #EF4444 */
+    --color-text-primary: 17 24 39; /* #111827 */
+    --color-text-secondary: 75 85 99; /* #4B5563 */
+    --color-muted: 156 163 175; /* #9CA3AF */
+  }
+
+  .dark {
+    --color-background: 10 10 15; /* #0A0A0F */
+    --color-surface: 17 24 39; /* #111827 */
+    --color-card: 31 41 55; /* #1F2937 */
+    --color-text-primary: 249 250 251; /* #F9FAFB */
+    --color-text-secondary: 209 213 219; /* #D1D5DB */
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface/80 backdrop-blur-lg border border-card shadow-lg;
+  }
+  .glass-panel {
+    @apply bg-surface/90 backdrop-blur-xl border-r border-card shadow-2xl;
+  }
+}
+
+@layer base {
+  body {
+    @apply antialiased text-textPrimary bg-background selection:bg-primary selection:text-white font-sans;
+  }
+  
+  /* Custom Scrollbar for a premium feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-card rounded-full hover:bg-muted transition-colors;
+  }
+}

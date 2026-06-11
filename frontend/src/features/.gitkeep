@@ -1,0 +1,2 @@
+# This file ensures that Git tracks this empty directory.
+# We need this so Netlify has a valid path for its "Functions directory" setting.

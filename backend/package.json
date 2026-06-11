@@ -1,0 +1,39 @@
+{
+  "name": "ai-study-assistant-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the AI Study Assistant",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.2.19",
+    "@langchain/core": "^0.2.16",
+    "@langchain/google-genai": "^0.0.22",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.10",
+    "@types/nodemailer": "^6.4.15",
+    "@types/pdf-parse": "^1.1.4",
+    "bcryptjs": "^2.4.3",
+    "chromadb": "^3.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "pdf-parse": "^1.1.1",
+    "redis": "^4.6.15",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}
