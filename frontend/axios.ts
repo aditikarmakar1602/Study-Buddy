@@ -1,9 +1,16 @@
 import axios from 'axios';
 import { useAuthStore } from './src/store/useAuthStore';
 
+// Get the base URL from the environment
+let baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1';
+
+// Automatically append /api/v1 if it's missing from the environment variable
+if (baseURL && !baseURL.endsWith('/api/v1')) {
+  baseURL = `${baseURL.replace(/\/$/, '')}/api/v1`;
+}
+
 const api = axios.create({
-  // Use the environment variable if available, otherwise fallback to localhost
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1',
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
