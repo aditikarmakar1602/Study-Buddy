@@ -111,3 +111,7 @@ For the **RAG Chat feature**:
 
 ## 📄 License
 This project is open-source and available under the MIT License.
+
+---
+
+&copy; Designed and developed by **Aditi Karmakar**.
