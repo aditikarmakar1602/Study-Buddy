@@ -2,7 +2,8 @@ import axios from 'axios';
 import { useAuthStore } from './src/store/useAuthStore';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1',
+  // Use the environment variable if available, otherwise fallback to localhost
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1',
   headers: {
     'Content-Type': 'application/json',
   },
